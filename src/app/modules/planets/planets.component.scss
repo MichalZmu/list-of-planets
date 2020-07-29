@@ -1,0 +1,66 @@
+.main-section {
+  margin: 0 10%;
+  color: white;
+
+  .planets-container {
+    margin-top: 30px;
+    color: white;
+    cursor: pointer;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 2rem;
+
+    .single-planet {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: 0.5s;
+
+      span {
+        margin-left: 10px
+      }
+    }
+
+    .single-planet:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  .search-container {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+
+    label {
+      margin-right: 10px;
+    }
+  }
+
+  .mat-paginator {
+    background: transparent;
+    color: white;
+    display: flex;
+    justify-content: center;
+
+    ::ng-deep.mat-select-trigger .mat-select-value {
+      color: white;
+    }
+
+    ::ng-deep .mat-select-arrow {
+      color: white;
+    }
+  }
+
+  .spinner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .md-table-pagination md-select:not([disabled]):focus .md-select-value {
+    color: white;
+  }
+}
+
+

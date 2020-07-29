@@ -1,0 +1,10 @@
+<section class="main-section">
+  <button mat-raised-button class="standard-button" (click)="goToMainPage()">Back</button>
+  <div *ngIf="!isLoading" class="planet-info">
+    <h1>{{planetName}}</h1>
+    <p>Rotation period: {{planet.rotationPeriod}}</p>
+    <p>Orbital period: {{planet.orbitalPeriod}}</p>
+    <p>Climate: {{planet.climate}}</p>
+  </div>
+  <mat-spinner *ngIf="isLoading" color="warn"></mat-spinner>
+</section>

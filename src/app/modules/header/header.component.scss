@@ -1,0 +1,15 @@
+.main-header {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+
+  .text {
+    position: absolute;
+    color: white;
+    top: 63px;
+    font-size: 30px;
+    font-family: "Open Sans";
+    font-weight: bold;
+  }
+
+}
