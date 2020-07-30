@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import {PlanetsService} from '../../services/planets.service';
 import {PageEvent} from '@angular/material/paginator';
 import {Router} from '@angular/router';
+import {Subject} from 'rxjs';
+import {debounceTime, distinctUntilChanged} from 'rxjs/operators';
 
 @Component({
   selector: 'app-planets',
@@ -14,6 +16,8 @@ export class PlanetsComponent implements OnInit {
   planetsPerPage = 10;
   pageSizeOptions = [5, 10, 25, 100];
   isLoading = false;
+  planetNameChanged: Subject<string> = new Subject<string>();
+
 
   constructor(private planetsService: PlanetsService,
               private router: Router) { }
@@ -27,6 +31,15 @@ export class PlanetsComponent implements OnInit {
     this.planetsService.getPlanetsTotal().subscribe(data => {
       this.totalPlanets = data.count;
     });
+    this.planetNameChanged.pipe(
+      debounceTime(300),
+      distinctUntilChanged())
+      .subscribe(name => {
+        this.planetsService.findPlanet(name).subscribe(data => {
+          this.planets = data.results;
+          this.totalPlanets = data.count;
+        });
+      });
   }
 
   changePage(pageData: PageEvent): void {
@@ -39,10 +52,7 @@ export class PlanetsComponent implements OnInit {
   }
 
   search(planetName: string): void {
-    this.planetsService.findPlanet(planetName).subscribe(data => {
-      this.planets = data.results;
-      this.totalPlanets = data.count;
-    });
+    this.planetNameChanged.next(planetName);
   }
 
   goToPlanetDetails(planetName: string): void {
