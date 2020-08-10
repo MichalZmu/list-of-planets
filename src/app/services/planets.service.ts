@@ -7,7 +7,7 @@ import {HttpClientService} from './http-client.service';
   providedIn: 'root'
 })
 export class PlanetsService {
-  private apiUrl = 'https://swapi.dev/api/planets';
+  private apiUrl = 'http://swapi.dev/api/planets';
 
   constructor(private http: HttpClientService) {
   }
