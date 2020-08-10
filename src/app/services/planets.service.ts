@@ -1,13 +1,13 @@
 import {Injectable} from '@angular/core';
 import {EMPTY, Observable} from 'rxjs';
-import { expand, map, reduce} from 'rxjs/operators';
+import {expand, map, reduce} from 'rxjs/operators';
 import {HttpClientService} from './http-client.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class PlanetsService {
-  private apiUrl = 'http://localhost:8080/api/planets/';
+  private apiUrl = 'https://swapi.dev/api/planets';
 
   constructor(private http: HttpClientService) {
   }
