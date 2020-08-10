@@ -1424,7 +1424,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           var finalAPI = "".concat(this.apiUrl, "?search=").concat(planetName);
           return this.http.get({
             url: finalAPI
-          }).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["debounceTime"])(1000));
+          });
         }
       }]);
 

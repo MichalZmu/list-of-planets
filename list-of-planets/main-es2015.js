@@ -727,7 +727,7 @@ class PlanetsService {
     }
     findPlanet(planetName) {
         const finalAPI = `${this.apiUrl}?search=${planetName}`;
-        return this.http.get({ url: finalAPI }).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["debounceTime"])(1000));
+        return this.http.get({ url: finalAPI });
     }
 }
 PlanetsService.ɵfac = function PlanetsService_Factory(t) { return new (t || PlanetsService)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_http_client_service__WEBPACK_IMPORTED_MODULE_3__["HttpClientService"])); };
