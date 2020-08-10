@@ -3,7 +3,7 @@
     <label for="search-box">Search:</label>
     <input #searchBox id="search-box" (input)="search(searchBox.value)"/>
   </div>
-  <div class="planets-container" *ngIf="planets.length > 0">
+  <div class="planets-container" *ngIf="planets.length > 0 && !isLoading">
     <div class="single-planet" *ngFor="let planet of planets" (click)="goToPlanetDetails(planet.name)">
       <app-planet-image [planetUrl]="planet.url"></app-planet-image>
       <span>{{planet.name}}</span>
