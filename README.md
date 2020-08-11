@@ -2,6 +2,8 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.7. The application downloads and displays planet list from SW API. The app pulls only as much data as needed in the exact moment (for example 20 items -> 2 API shots, 10 planets per single). For better efficiency, downloaded data is stored in local storage.
 
+![screen-from-app](https://i.imgur.com/XvSUC78.jpg)
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
