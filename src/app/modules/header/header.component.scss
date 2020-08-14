@@ -4,20 +4,20 @@
   justify-content: center;
 
   img {
-    width: 300px;
+    width: 250px;
   }
 
   .text {
     position: absolute;
     color: white;
-    top: 42px;
-    font-size: 18px;
+    top: 40px;
+    font-size: 15px;
     font-weight: bold;
   }
 
 }
 
-@media (min-width: 460px) {
+@media (min-width: 500px) {
   .main-header {
     img {
       width: 450px;
