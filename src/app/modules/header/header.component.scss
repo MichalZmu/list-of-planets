@@ -5,6 +5,7 @@
 
   img {
     width: 250px;
+    height: auto;
   }
 
   .text {
@@ -14,7 +15,6 @@
     font-size: 15px;
     font-weight: bold;
   }
-
 }
 
 @media (min-width: 500px) {
