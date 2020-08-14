@@ -5,4 +5,17 @@ html, body {
   height: 100%;
 }
 
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+@font-face {
+  font-family: "Roboto-Black";
+  src: url('src/assets/fonts/Roboto-Black.ttf') format("opentype");
+}
+
+@font-face {
+  font-family: "Roboto-Bold";
+  src: url('src/assets/fonts/Roboto-Bold.ttf') format("opentype");
+}
+
+body {
+  margin: 0;
+  font-family: Roboto-Black;
+}
