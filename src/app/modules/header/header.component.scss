@@ -3,13 +3,30 @@
   display: flex;
   justify-content: center;
 
+  img {
+    width: 300px;
+  }
+
   .text {
     position: absolute;
     color: white;
-    top: 63px;
-    font-size: 30px;
+    top: 42px;
+    font-size: 18px;
     font-family: "Open Sans";
     font-weight: bold;
   }
 
+}
+
+@media (min-width: 460px) {
+  .main-header {
+    img {
+      width: 450px;
+    }
+
+    .text {
+      top: 54px;
+      font-size: 25px;
+    }
+  }
 }
