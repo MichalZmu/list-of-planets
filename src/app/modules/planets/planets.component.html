@@ -10,7 +10,7 @@
     </div>
   </div>
   <div class="spinner">
-    <mat-spinner *ngIf="isLoading" color="warn"></mat-spinner>
+    <mat-spinner [diameter]="50" *ngIf="isLoading" color="warn"></mat-spinner>
   </div>
   <mat-paginator [length]="totalPlanets" [pageSize]="planetsPerPage" [pageSizeOptions]="pageSizeOptions"
                  (page)="changePage($event)"></mat-paginator>
